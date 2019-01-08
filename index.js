@@ -37,7 +37,7 @@ mongoose.connect('mongodb://localhost:27017/productos', {
     app.listen(app.get('port'), (err) => {
         if (err) console.log(`${err}`)
 
-        console.log('server runing in http://localhost:3000')
+        console.log('server runing in http://localhost:3000/product')
     })
 
 })
