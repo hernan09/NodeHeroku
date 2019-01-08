@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const path = require('path')
 const rout = require('./router/rotes')
-const morgan = require('morgan')
+    //const morgan = require('morgan')
 
 
 let app = express()
@@ -11,8 +11,8 @@ let app = express()
 
 //morgan
 
-app.use(morgan('dev'))
-    //handlebars
+//app.use(morgan('dev'))
+//handlebars
 app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, 'views'))
     //puerto
