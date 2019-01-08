@@ -1,0 +1,27 @@
+#formu {
+    width: 50%;
+    margin: auto;
+}
+
+#formu2 {
+    width: 50%;
+    margin: auto;
+}
+
+#tabla {
+    overflow: scroll;
+    width: 50%;
+    height: 500px;
+    margin: auto;
+}
+
+#tabla::-webkit-scrollbar {
+    background: white;
+    width: 7px;
+}
+
+#tabla::-webkit-scrollbar-thumb {
+    width: 5px;
+    background-color: rgb(33, 150, 243);
+    border-radius: 7px;
+}
