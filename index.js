@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const path = require('path')
 const rout = require('./router/rotes')
-    //const morgan = require('morgan')
+const morgan = require('morgan')
 
 
 let app = express()
@@ -11,8 +11,8 @@ let app = express()
 
 //morgan
 
-//app.use(morgan('dev'))
-//handlebars
+app.use(morgan('dev'))
+    //handlebars
 app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, 'views'))
     //puerto
@@ -27,7 +27,7 @@ app.use('/', rout)
 app.use(express.static(path.join(__dirname, 'public')))
 
 //mongoose
-mongoose.connect('mongodb://localhost:27017/productos', {
+mongoose.connect('mongodb://hernan09:eoraptor09@ds151354.mlab.com:51354/mongo-rest', {
     useNewUrlParser: true
 }, (err) => {
     if (err) console.log(`${err}`)
