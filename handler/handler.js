@@ -12,6 +12,9 @@ function Mostrar(req, res) {
 }
 
 function Enviar(req, res) {
+
+
+
     let producto1 = new producto()
     producto1.name = req.body.name,
         producto1.price = req.body.price
@@ -22,6 +25,8 @@ function Enviar(req, res) {
         res.redirect('/product')
 
     })
+
+
 }
 
 function eliminar(req, res) {
