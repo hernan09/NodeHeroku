@@ -38,7 +38,7 @@
         </div>
     </nav>
     <div id="formu">
-       <form action="/add" method="POST">
+       <form action="/product" method="POST">
            <input type="text" class="form-control" name="name" placeholder="ingrese nombre">
            <br>
            <input type="text" class="form-control" name="price" placeholder="ingrese un precio">
@@ -68,12 +68,12 @@
             <tbody>
               {{#each producto}}
               
-                <tr class="table-succes">
+                <tr class="table-Light">
                    
-                    <td>{{name}}</td>
-                    <td>{{price}}</td>
-                    <td><a href="/delete/{{id}}" class="btn btn-danger">Eliminar</a></td>
-                    <td><a href="/edit/{{id}}" class="btn btn-info">Modificar</a></td>
+                    <td><div id="nom">{{name}}</div></td>
+                    <td><div id="pri">{{price}}</div></td>
+                    <td><a id="delbot" href="/delete/{{id}}" class="btn btn-danger">Eliminar</a></td>
+                    <td><a id="upbot" href="/edit/{{id}}" class="btn btn-info">Modificar</a></td>
                     
                 </tr>
                {{/each}}

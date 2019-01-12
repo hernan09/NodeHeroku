@@ -1,10 +1,10 @@
 #formu {
-    width: 50%;
+    width: 30%;
     margin: auto;
 }
 
 #formu2 {
-    width: 50%;
+    width: 40%;
     margin: auto;
     margin-top: 10%;
     /*animcaion*/
@@ -68,6 +68,16 @@
     /*IE 10+*/
 }
 
+#delbot:hover {
+    transform: scale(1.1);
+    transition: all ease 0.8s;
+}
+
+#upbot:hover {
+    transform: scale(1.1);
+    transition: all ease 0.8s;
+}
+
 #tabla::-webkit-scrollbar {
     background: white;
     width: 7px;
@@ -106,6 +116,36 @@
     -ms-transform-origin: 50% 50%;
     -ms-animation-fill-mode: forwards;
     /*IE 10+*/
+}
+
+#contenedorTarjetas {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 10%;
+    padding: 10px;
+}
+
+#contenedorTarjetas>#card:hover {
+    transform: scale(1.1);
+    transition: all ease 0.8s;
+    background: #000428;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004e92, #000428);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #004e92, #000428);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#carprice {
+    margin: auto;
+}
+
+#carname {
+    margin: auto;
 }
 
 

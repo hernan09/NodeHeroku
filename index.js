@@ -27,7 +27,7 @@ app.use('/', rout)
 app.use(express.static(path.join(__dirname, 'public')))
 
 //mongoose
-mongoose.connect('mongodb://hernan09:eoraptor09@ds151354.mlab.com:51354/mongo-rest', {
+mongoose.connect('mongodb://localhost:27017/productos', {
     useNewUrlParser: true
 }, (err) => {
     if (err) console.log(`${err}`)
@@ -37,7 +37,7 @@ mongoose.connect('mongodb://hernan09:eoraptor09@ds151354.mlab.com:51354/mongo-re
     app.listen(app.get('port'), (err) => {
         if (err) console.log(`${err}`)
 
-        console.log('server runing in http://localhost:3000/product')
+        console.log('server runing in http://localhost:3000')
     })
 
 })
