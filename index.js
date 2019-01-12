@@ -6,7 +6,7 @@ const rout = require('./router/rotes')
 const morgan = require('morgan')
 
 
-let app = express()
+const app = express()
 
 
 //morgan
