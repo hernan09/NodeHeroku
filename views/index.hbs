@@ -103,14 +103,17 @@
         let form=document.formulario
          form.name.focus()
         form.addEventListener('submit',e=>{
-         
+        
 
-          if(form.name.value==""){
+          if(form.name.value==""|| isNaN(form.name.value)==false ||form.price.value==""||isNaN(form.price.value)==true  ){
               e.preventDefault()
+              form.name.value === ""
                alert('ingrese un producto por favor')
+               
 
+               
             }else{
-               form.submit()
+              form.submit()
             }
 
 
