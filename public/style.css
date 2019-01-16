@@ -80,13 +80,13 @@
 
 #tabla::-webkit-scrollbar {
     background: white;
-    width: 7px;
+    width: 4px;
 }
 
 #tabla::-webkit-scrollbar-thumb {
-    width: 5px;
+    width: 4px;
     background-color: rgb(33, 150, 243);
-    border-radius: 7px;
+    border-radius: 4px;
     height: 10px;
 }
 
