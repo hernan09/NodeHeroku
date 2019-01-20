@@ -54,31 +54,18 @@
 
 
     <div id="tabla">
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                   
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col">Eliminar</th>
-                    <th scope="col">Modificar</th>
-                </tr>
-            </thead>
-            <tbody>
-              {{#each producto}}
-              
-                <tr class="table-ligth">
-                   
-                    <td><div id="nom">{{name}}</div></td>
-                    <td><div id="pri">{{price}}</div></td>
-                    <td><a id="delbot" href="/delete/{{id}}" class="btn btn-danger">Eliminar</a></td>
-                    <td><a id="upbot" href="/edit/{{id}}" class="btn btn-info">Modificar</a></td>
-                    
-                </tr>
-               {{/each}}
-               
-            </tbody>
-        </table>
+       {{#each producto}}
+            <div id="carta1" class="card text-white bg-info mb-3" style="max-width: 20rem;">
+                <div class="card-header">{{price}}</div>
+                <div class="card-body">
+                    <h4 class="card-title">{{name}}</h4>
+                    <p class="card-text"><a href="/delete/{{id}}" class="btn btn-danger">Eliminar</a></p>
+                    <p><a href="/edit/{{id}}" class="btn btn-primary">Modificar</a></p>
+                </div>
+            </div>
+
+
+       {{/each}}
 
     </div>
 
