@@ -42,11 +42,12 @@
     <br>
     <br>
     <div id="formu2">
-        <form action="/update/{{data.id}}" method="POST">
+        <form action="/update/{{data.id}}" method="POST" >
             <input type="text" name="name" class="form-control" value="{{data.name}}" >
             <br>
             <input type="text" name="price" class="form-control" value="{{data.price}}" >
             <br>
+            
             <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
     
         </form>
@@ -57,7 +58,7 @@
         <div id="card" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
             <div id="carprice" class="card-header">{{data.price}} $</div>
             <div id="carname" class="card-body">
-                <h4  class="card-title">{{data.name}}</h4>
+                <h4 id="nombree" class="card-title">{{data.name}}</h4>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
                     content.</p>
             </div>

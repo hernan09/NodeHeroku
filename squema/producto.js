@@ -4,7 +4,8 @@ const schema = mongose.Schema
 
 let producto = new schema({
     name: { type: String },
-    price: { type: Number, default: 0 }
+    price: { type: Number, default: 0 },
+
 
 
 })

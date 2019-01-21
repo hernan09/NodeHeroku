@@ -74,6 +74,24 @@
     margin: auto;
 }
 
+#botelim {
+    margin-left: 30%;
+}
+
+#botup {
+    margin-left: 30%;
+}
+
+#botelim:hover {
+    transform: scale(1.1);
+    transition: all 1s ease;
+}
+
+#botup:hover {
+    transform: scale(1.1);
+    transition: all 1s ease;
+}
+
 #tabla::-webkit-scrollbar {
     background: white;
     width: 4px;
@@ -84,6 +102,11 @@
     background-color: rgb(33, 150, 243);
     border-radius: 4px;
     height: 10px;
+}
+
+.card-title {
+    margin-left: 30%;
+    color: white;
 }
 
 #nav1 {

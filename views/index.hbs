@@ -37,11 +37,12 @@
 
     
     <div id="formu">
-       <form name="formulario" action="/product" method="POST">
+       <form name="formulario" action="/product" method="POST" >
            <input id="nombre" type="text" class="form-control" name="name" placeholder="ingrese nombre">
            <br>
            <input type="text" class="form-control" name="price" placeholder="ingrese un precio">
            <br>
+          
            <button  type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
 
        </form>
@@ -55,12 +56,13 @@
 
     <div id="tabla">
        {{#each producto}}
-            <div id="carta1" class="card text-white bg-info mb-3" style="max-width: 20rem;">
+            <div id="carta1" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
                 <div class="card-header">{{price}}</div>
                 <div class="card-body">
                     <h4 class="card-title">{{name}}</h4>
-                    <p class="card-text"><a href="/delete/{{id}}" class="btn btn-danger">Eliminar</a></p>
-                    <p><a href="/edit/{{id}}" class="btn btn-primary">Modificar</a></p>
+                    <p id="botelim" class="card-text"><a href="/delete/{{id}}" class="btn btn-danger">Delete</a></p>
+                    <p id="botup"><a href="/edit/{{id}}" class="btn btn-primary">Update</a></p>
+                    
                 </div>
             </div>
 

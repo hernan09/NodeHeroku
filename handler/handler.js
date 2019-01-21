@@ -17,7 +17,8 @@ function Enviar(req, res) {
 
     let producto1 = new producto()
     producto1.name = req.body.name,
-        producto1.price = req.body.price
+        producto1.price = req.body.price,
+        producto1.foto = req.body.foto
 
 
     producto1.save((err, producto1) => {

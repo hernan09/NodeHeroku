@@ -6,6 +6,10 @@ const rout = require('./router/rotes')
 const morgan = require('morgan')
 
 
+
+
+
+
 const app = express()
 
 
@@ -18,7 +22,10 @@ app.set('views', path.join(__dirname, 'views'))
     //puerto
 app.set('port', process.env.PORT || 3000)
 
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({
+    extended: false,
+
+}))
 
 //rutas
 app.use('/', rout)
