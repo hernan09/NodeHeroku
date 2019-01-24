@@ -37,12 +37,13 @@
 
     
     <div id="formu">
-       <form name="formulario" action="/product" method="POST" >
+       <form name="formulario" action="/product" method="POST" enctype="multipart/form-data">
            <input id="nombre" type="text" class="form-control" name="name" placeholder="ingrese nombre">
            <br>
            <input type="text" class="form-control" name="price" placeholder="ingrese un precio">
            <br>
-          
+          <input type="file" name="foto" class="form-control">
+          <br>
            <button  type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
 
        </form>
@@ -60,6 +61,7 @@
                 <div class="card-header">{{price}}</div>
                 <div class="card-body">
                     <h4 class="card-title">{{name}}</h4>
+                    <img  id="img3" src="/uploads/logochicocircular.png" alt="">
                     <p id="botelim" class="card-text"><a href="/delete/{{id}}" class="btn btn-danger">Delete</a></p>
                     <p id="botup"><a href="/edit/{{id}}" class="btn btn-primary">Update</a></p>
                     

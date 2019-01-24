@@ -4,6 +4,15 @@ const mongoose = require('mongoose')
 const path = require('path')
 const rout = require('./router/rotes')
 const morgan = require('morgan')
+const multer = require('multer')
+
+let storage = multer.diskStorage({
+    destination: path.join(__dirname, '/public/uploads'),
+    filename: (req, file, cb) => {
+        cb(null, file.originalname)
+    }
+
+})
 
 
 
@@ -12,8 +21,9 @@ const morgan = require('morgan')
 
 const app = express()
 
-
-//morgan
+//multer
+app.use(multer({ storage }).single('foto'))
+    //morgan
 
 app.use(morgan('dev'))
     //handlebars

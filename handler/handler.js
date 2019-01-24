@@ -18,9 +18,11 @@ function Enviar(req, res) {
     let producto1 = new producto()
     producto1.name = req.body.name,
         producto1.price = req.body.price,
-        producto1.foto = req.body.foto
+        producto1.foto = '/uploads/' + req.file.foto
 
 
+
+    console.log(req.file)
     producto1.save((err, producto1) => {
         if (err) res.status(500).send(`${err}`)
         res.redirect('/product')
