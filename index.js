@@ -7,7 +7,7 @@ const morgan = require('morgan')
 const multer = require('multer')
 
 let storage = multer.diskStorage({
-    destination: path.join(__dirname, '/public/uploads'),
+    destination: path.join(__dirname, '/public/uploads/'),
     filename: (req, file, cb) => {
         cb(null, file.originalname)
     }
@@ -33,7 +33,7 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('port', process.env.PORT || 3000)
 
 app.use(bodyParser.urlencoded({
-    extended: false,
+    extended: true,
 
 }))
 

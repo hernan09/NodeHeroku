@@ -11,6 +11,16 @@ function Mostrar(req, res) {
     })
 }
 
+function fot(req, res) {
+    producto.find({}, (err, producto) => {
+        if (err) res.status(500).send(`${err}`)
+        if (!producto) res.status(404).send({ mensaje: 'no se ha encontrado los producto' })
+
+        res.render('fot', { producto })
+    })
+}
+
+
 function Enviar(req, res) {
 
 
@@ -18,7 +28,7 @@ function Enviar(req, res) {
     let producto1 = new producto()
     producto1.name = req.body.name,
         producto1.price = req.body.price,
-        producto1.foto = '/uploads/' + req.file.foto
+        producto1.foto = '/uploads/' + req.file.originalname
 
 
 
@@ -69,6 +79,7 @@ module.exports = {
     Mostrar,
     eliminar,
     edit,
-    update
+    update,
+    fot
 
 }

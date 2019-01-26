@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav id="nav1" class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="/fot">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -56,12 +56,12 @@
 
 
     <div id="tabla">
-       {{#each producto}}
+        {{#each producto}}
             <div id="carta1" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
                 <div class="card-header">{{price}}</div>
                 <div class="card-body">
                     <h4 class="card-title">{{name}}</h4>
-                    <img  id="img3" src="/uploads/logochicocircular.png" alt="">
+                    <img  id="img3" src="{{foto}}" alt="">
                     <p id="botelim" class="card-text"><a href="/delete/{{id}}" class="btn btn-danger">Delete</a></p>
                     <p id="botup"><a href="/edit/{{id}}" class="btn btn-primary">Update</a></p>
                     
@@ -69,7 +69,7 @@
             </div>
 
 
-       {{/each}}
+        {{/each}}
 
     </div>
 
