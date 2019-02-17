@@ -5,6 +5,7 @@ const path = require('path')
 const rout = require('./router/rotes')
 const morgan = require('morgan')
 const multer = require('multer')
+    //const nodemailer = require('nodemailer')
 
 let storage = multer.diskStorage({
     destination: path.join(__dirname, '/public/uploads/'),
@@ -20,6 +21,8 @@ let storage = multer.diskStorage({
 
 
 const app = express()
+
+
 
 //multer
 app.use(multer({ storage }).single('foto'))

@@ -1,4 +1,5 @@
 const producto = require('../squema/producto')
+const nodemailer = require('nodemailer')
 
 
 function Mostrar(req, res) {
@@ -10,6 +11,8 @@ function Mostrar(req, res) {
 
     })
 }
+
+
 
 function fot(req, res) {
     producto.find({}, (err, producto) => {
@@ -67,10 +70,47 @@ function edit(req, res) {
 
 function update(req, res) {
     let id = req.params.id
-    let cuerpo = req.body
+    let cuerpo = {
+        name: req.body.name,
+        price: req.body.price,
+        foto: '/uploads/' + req.file.originalname
+    }
+    console.log(req.file)
     producto.findByIdAndUpdate(id, cuerpo, (err, producto) => {
         if (err) res.status(500).send(`${err}`)
         res.redirect('/product')
+    })
+}
+
+function email(req, res) {
+    let transporter = nodemailer.createTransport({
+        service: 'outlook',
+        auth: {
+            user: 'hernag_09@hotmail.com',
+            pass: 'asdasdasdasd'
+        },
+
+        tls: {
+            rejectUnauthorized: false
+        }
+
+    })
+
+    let mailoptions = {
+        from: 'hernan',
+        to: 'hernag_09@hotmail.com',
+        subject: 'heroku',
+        text: 'name' + req.body.name + 'mail' + req.body.email + 'message' + req.body.message,
+        html: '<ul><li>' + req.body.name + '</li><li>' + req.body.email + '</li><li>' + req.body.message + '</li></ul>'
+
+    }
+
+    transporter.sendMail(mailoptions, (error, info) => {
+        if (error) console.log(`${error}`)
+        else {
+            console.log(info)
+            res.redirect('/product')
+        }
     })
 }
 
@@ -80,6 +120,7 @@ module.exports = {
     eliminar,
     edit,
     update,
-    fot
+    fot,
+    email
 
 }

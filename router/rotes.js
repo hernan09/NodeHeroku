@@ -4,10 +4,12 @@ const handler = require('../handler/handler')
 const midle = require('../index')
 api.get('/product', handler.Mostrar)
 api.get('/fot', handler.fot)
+api.post('/mail', handler.email)
 api.post('/product', handler.Enviar)
 api.get('/delete/:ProductId', handler.eliminar)
 api.get('/edit/:id', handler.edit)
 api.post('/update/:id', handler.update)
+
 
 
 
