@@ -185,6 +185,14 @@
 }
 
 
+/*fotos galeria*/
+
+#main .thumb>.image:hover {
+    transform: scale(1.1);
+    transition: all 1s ease;
+}
+
+
 /* keyfram del nav*/
 
 @keyframes form {

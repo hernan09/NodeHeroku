@@ -87,7 +87,7 @@ function email(req, res) {
         service: 'outlook',
         auth: {
             user: 'hernag_09@hotmail.com',
-            pass: 'asdasdasdasd'
+            pass: 'Raptor09'
         },
 
         tls: {
@@ -101,7 +101,7 @@ function email(req, res) {
         to: 'hernag_09@hotmail.com',
         subject: 'heroku',
         text: 'name' + req.body.name + 'mail' + req.body.email + 'message' + req.body.message,
-        html: '<ul><li>' + req.body.name + '</li><li>' + req.body.email + '</li><li>' + req.body.message + '</li></ul>'
+        html: '<ul><li>' + req.body.name + '</li><li>' + req.body.email + '</li></ul>' + '<p>' + req.body.message + '</p>'
 
     }
 
